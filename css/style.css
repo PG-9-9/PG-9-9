@@ -1431,3 +1431,26 @@ body.offcanvas {
 
 .js .animate-box {
   opacity: 0; }
+
+  .skills-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-category {
+    width: 45%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.skill-category.blue { border-left: 5px solid blue; }
+.skill-category.green { border-left: 5px solid green; }
+.skill-category.red { border-left: 5px solid red; }
+.skill-category.purple { border-left: 5px solid purple; }
+.skill-category.orange { border-left: 5px solid orange; }
+.skill-category.teal { border-left: 5px solid teal; }
+.skill-category.lightblue { border-left: 5px solid lightIt seems that I repeated part of the code excessively in my previous response. Let's correct that.
