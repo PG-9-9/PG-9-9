@@ -1540,4 +1540,97 @@ body.offcanvas {
 			opacity: 1;
 			}
 
-      
+/* Blog entry modern styling */
+.modern-entry {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Consistent box-shadow */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  height: 450px; /* Consistent block height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modern-entry:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+.modern-img img {
+  border-radius: 15px;
+  transition: transform 0.3s, border-radius 0.3s;
+  width: 100%;
+  height: 200px; /* Fixed height for images */
+  object-fit: cover;
+}
+.modern-entry:hover img {
+  border-radius: 25px;
+}
+.modern-desc {
+  background-color: #111;
+  padding: 20px;
+  color: #fff;
+}
+
+/* Ensure text is white */
+.modern-desc a, .modern-desc p, .modern-desc span {
+  color: #fff !important;
+}
+
+/* Subtle animation effects */
+.animate-box {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.animate-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Link hover effect for the whole block */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+/* Blog entry container */
+.blog-entry {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255,0.1); /* Subtle shadow */
+  min-height: 450px; /* Ensuring consistent height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/* Blog images with rounded corners */
+.blog-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Rounded corners on the top */
+}
+
+/* Text container */
+.desc {
+  padding: 20px;
+  text-align: left;
+  color: white;
+}
+
+/* Consistent padding and margins */
+.blog-img {
+  margin-bottom: 0; /* Ensure no gap below image */
+}
+
+
+/* Ensure uniform hover effect */
+.blog-entry:hover {
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Contact container */
+
