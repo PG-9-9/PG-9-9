@@ -3,136 +3,154 @@
 	<head>
 		<style>
 			/* Loader styling */
-			.hidden {
-			display: none;
-			}
-
 			.loader-wrapper {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			background-color: #000000;
-			z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 9999;
+  }
+
+  .thinking-face {
+    font-size: 100px;
+    animation: flap 1s infinite ease-in-out;
+  }
+
+  @keyframes flap {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .happy-face {
+    display: none;
+    font-size: 100px;
+  }
+
+  .fade-in {
+    display: block;
+    animation: fadeIn 1s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+			/* General Styling */
+			.colorlib-work {
+				background: #000;
+				padding: 50px 0;
 			}
 
-			.thinking-face,
-			.happy-face {
-			font-size: 100px;
-			transition: opacity 1s ease-in-out;
+			.colorlib-heading {
+				font-size: 2.5em;
+				font-weight: 700;
+				color: #fff;
+				margin-bottom: 30px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
 			}
 
-			.happy-face {
-			display: none;
-			opacity: 0;
+			.work-menu span a {
+				padding: 10px 20px;
+				border-radius: 50px;
+				background: #fff;
+				color: #000;
+				text-transform: uppercase;
+				margin-right: 10px;
+				font-size: 14px;
 			}
 
-			/* Animation for smiley change */
-			.fade-out {
-			opacity: 0;
+			.work-menu span a.active {
+				background: #e74c3c;
+				color: #fff;
 			}
 
-			.fade-in {
-			display: block;
-			opacity: 1;
-/* General Styling */
-.colorlib-work {
-    background: #000;
-    padding: 50px 0;
-}
-
-.colorlib-heading {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.work-menu span a {
-    padding: 10px 20px;
-    border-radius: 50px;
-    background: #fff;
-    color: #000;
-    text-transform: uppercase;
-    margin-right: 10px;
-    font-size: 14px;
-}
-
-.work-menu span a.active {
-    background: #e74c3c;
-    color: #fff;
-}
-
-.project {
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-    transition: all 0.3s ease;
-    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
-}
-
-.project:hover {
-    transform: translateY(-5px);
-}
-
-.project .desc {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    padding: 15px;
-    text-align: left;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.project:hover .desc {
-    opacity: 1;
-}
-
-.project .desc h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-.project .desc span {
-    font-size: 1em;
-    color: #bdc3c7;
-}
-
-.project .desc p.icon {
-    margin-top: 10px;
-}
-
-.project .desc p.icon span {
-    margin-right: 15px;
-    color: #f39c12;
-}
-
-.btn-load-more {
-    background-color: #e74c3c;
-    color: #fff;
-    border: none;
-    padding: 12px 35px;
-    font-size: 16px;
-    border-radius: 50px;
-    transition: background-color 0.3s ease;
-}
-
-.btn-load-more:hover {
-    background-color: #c0392b;
-}
-
-
+			.project {
+				position: relative;
+				overflow: hidden;
+				border-radius: 15px;
+				transition: all 0.3s ease;
+				box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
 			}
+
+			.project:hover {
+				transform: translateY(-5px);
+			}
+
+			.project .desc {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+				background: rgba(0, 0, 0, 0.85);
+				color: #fff;
+				padding: 15px;
+				text-align: left;
+				opacity: 0;
+				transition: opacity 0.3s ease-in-out;
+			}
+
+			.project:hover .desc {
+				opacity: 1;
+			}
+
+			.project .desc h3 {
+				font-size: 1.8em;
+				margin-bottom: 10px;
+				font-weight: 700;
+			}
+
+			.project .desc span {
+				font-size: 1em;
+				color: #bdc3c7;
+			}
+
+			.project .desc p.icon {
+				margin-top: 10px;
+			}
+
+			.project .desc p.icon span {
+				margin-right: 15px;
+				color: #f39c12;
+			}
+
+			.btn-load-more {
+				background-color: #e74c3c;
+				color: #fff;
+				border: none;
+				padding: 12px 35px;
+				font-size: 16px;
+				border-radius: 50px;
+				transition: background-color 0.3s ease;
+			}
+
+			.btn-load-more:hover {
+				background-color: #c0392b;
+			}
+			
+
+
+			
 		</style>
 	<link rel="shortcut icon" href="upimg/ai.png">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -172,12 +190,14 @@
 
 	</head>
 	<body>
+		
 		<div class="loader-wrapper">
-			<div class="thinking-face">&#x1F914;</div> <!-- Thinking emoji -->
-			<div class="happy-face">&#x1F60A;</div> <!-- Happy emoji -->
+			<span class="thinking-face">🤔</span>
+			<span class="happy-face">😊</span>
 		  </div>
 		  
-		  
+	<div id="particles-js"></div>
+	  
 	<div id="colorlib-page">
 		<div class="container-wrap">
 		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
@@ -1100,7 +1120,7 @@
 			</section>
 
 			<!---What I've Been Up To -->
-			<section class="colorlib-work" data-section="work">
+			<section class="colorlib-work" data-section="work" style="background-color:transparent;">
 				<div class="colorlib-narrow-content">
 					<div class="row">
 						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -1110,11 +1130,7 @@
 					</div>
 					<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
 						<div class="col-md-12">
-							<p class="work-menu">
-								<span><a href="#" class="active">Projects</a></span> 
-								<span><a href="#">Software</a></span>
-								<span><a href="#">Apps</a></span>
-							</p>
+							
 						</div>
 					</div>
 					<div class="row">
@@ -1212,7 +1228,7 @@
 			
 			
 <!-- Blog Section -->
-<section class="colorlib-blog" data-section="blog">
+<section class="colorlib-blog" data-section="blog" style="background-color:transparent;">
     <div class="colorlib-narrow-content">
         <div class="row">
             <div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
@@ -1222,7 +1238,7 @@
         </div>
         <div class="row">
             <!-- Blog Entry 1 -->
-            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInUp">
+            <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInUp" style="background-color:transparent;">
                 <a href="https://medium.com/@vishaalsaravanan2000/future-with-artificial-intelligence-understanding-neural-nets-and-a-gentle-walk-through-over-cnns-956f6fc8ab1a">
                     <div class="blog-entry modern-entry">
                         <div class="blog-img modern-img">
@@ -1376,34 +1392,93 @@
 	</script>
 	
 	<!--happy face loader -->
-
 	<script>
-		window.addEventListener("load", function() {
-		  // Change to happy face after 2 seconds
-		  setTimeout(function() {
-			document.querySelector(".thinking-face").classList.add("fade-out");
+		window.addEventListener("load", function () {
+		  // Show happy face after 3 seconds
+		  setTimeout(function () {
+			document.querySelector(".thinking-face").style.display = "none";
 			document.querySelector(".happy-face").classList.add("fade-in");
-		  }, 2000); // Adjust time if needed
+		  }, 3000);
 	  
-		  // Hide loader completely after 3 seconds
-		  setTimeout(function() {
+		  // Hide loader completely after 4 seconds
+		  setTimeout(function () {
 			document.querySelector(".loader-wrapper").classList.add("hidden");
-		  }, 3000); // Adjust time if needed
+		  }, 4000);
 		});
-	  </script>
+	</script>
 	  
-<!-- JavaScript for scroll-triggered animations -->
+	<!-- JavaScript for scroll-triggered animations -->
+	<script>
+			document.addEventListener('scroll', function() {
+				var elements = document.querySelectorAll('.animate-box');
+				elements.forEach(function(el) {
+					var position = el.getBoundingClientRect().top;
+					if (position < window.innerHeight) {
+						el.classList.add('visible');
+					}
+				});
+			});
+	</script>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <script>
-    document.addEventListener('scroll', function() {
-        var elements = document.querySelectorAll('.animate-box');
-        elements.forEach(function(el) {
-            var position = el.getBoundingClientRect().top;
-            if (position < window.innerHeight) {
-                el.classList.add('visible');
-            }
-        });
-    });
-</script>
+	particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 100, // adjust for more or fewer stars
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#ffffff" // white stars
+    },
+    "shape": {
+      "type": "circle" // more circular stars
+    },
+    "opacity": {
+      "value": 1,
+      "random": true,
+      "anim": {
+        "enable": false
+      }
+    },
+    "size": {
+      "value": 3, // star size
+      "random": true
+    },
+    "line_linked": {
+      "enable": false // No connecting lines
+    },
+    "move": {
+      "enable": true,
+      "speed": 0.3, // slow movement
+      "direction": "none",
+      "random": true,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": false
+      },
+      "onclick": {
+        "enable": false
+      }
+    }
+  },
+  "retina_detect": true
+});
+  </script>
+  
+  
+
+
 	
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
