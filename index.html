@@ -2,6 +2,10 @@
 <html>
 	<head>
 		<style>
+		.navbar-toggler {
+    		display: none !important;
+		}
+
 
 			/* Loader styling */
 			.loader-wrapper {
@@ -210,41 +214,41 @@
 	  
 	<div id="colorlib-page">
 		<div class="container-wrap">
-		<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
-		<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
-			<div class="text-center">
-				<div class="author-img" style="background-image: url(images/about.webp);"></div>
-				<h1 id="colorlib-logo"><a href="index.html">Vishaal Saravanan</a></h1>
-				<span class="position"><a href="#"> Machine Learning and Data Specialist</a></span>
-			</div>
-			<nav id="colorlib-main-menu" role="navigation" class="navbar">
-				<div id="navbar" class="collapse">
+			<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+			<aside id="colorlib-aside" role="complementary" class="border js-fullheight" style="background: linear-gradient(135deg, rgba(11,27,51,1) 0%, rgba(34,0,69,1) 100%); backdrop-filter: blur(10px);">
+				<div class="text-center">
+					<div class="author-img" style="background-image: url(images/about.webp); box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);"></div>
+					<h1 id="colorlib-logo"><a href="index.html" style="color: #fff; text-shadow: 0px 0px 10px rgba(255,255,255,0.5);">Vishaal Saravanan</a></h1>
+					<span class="position" style="color: #c0c0ff;"><a href="#" style="color: inherit;"> Machine Learning and Data Specialist</a></span>
+				</div>
+				<nav id="colorlib-main-menu" role="navigation" class="navbar" style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(15px);">
+					<div id="navbar" class="collapse">
+						<ul style="color: #ffffff; text-shadow: 0px 0px 5px rgba(255,255,255,0.3);">
+							<li class="active"><a href="#" data-nav-section="home" style="color: #ffffff;">Home</a></li>
+							<li><a href="#" data-nav-section="about" style="color: #ffffff;">About</a></li>
+							<li><a href="#" data-nav-section="skills" style="color: #ffffff;">Code Superpowers</a></li>
+							<li><a href="#" data-nav-section="experience" style="color: #ffffff;">Experience</a></li>
+							<li><a href="#" data-nav-section="education" style="color: #ffffff;">Certifications And Research</a></li>
+							<li><a href="#" data-nav-section="services" style="color: #ffffff;">Beyond Ai</a></li>
+							<li><a href="#" data-nav-section="work" style="color: #ffffff;">Projects</a></li>
+							<li><a href="#" data-nav-section="blog" style="color: #ffffff;">Blog</a></li>
+							<li><a href="#" data-nav-section="contact" style="color: #ffffff;">Contact</a></li>
+						</ul>
+					</div>
+				</nav>
+			
+				<div class="colorlib-footer">
+					<p><small> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					<a href="https://colorlib.com" target="_blank" style="color: #fff;"><i class="icon-heart" aria-hidden="true"></i></a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> </small></p>
 					<ul>
-						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
-						<li><a href="#" data-nav-section="about">About</a></li>
-						<li><a href="#" data-nav-section="skills">Code Superpowers</a></li>
-						<li><a href="#" data-nav-section="experience">Experience</a></li>
-						<li><a href="#" data-nav-section="education">Certifications And Research</a></li>
-						<li><a href="#" data-nav-section="services">Beyond Ai</a></li>
-						<li><a href="#" data-nav-section="work">Projects</a></li>
-						<li><a href="#" data-nav-section="blog">Blog</a></li>
-						<li><a href="#" data-nav-section="contact">Contact</a></li>
+						<li><a href="https://twitter.com/VichuVishaal"><i class="icon-twitter2" style="color: #00acee;"></i></a></li>
+						<li><a href="https://www.instagram.com/inside_vichus_world/"><i class="icon-instagram" style="color: #833AB4;"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/vishaalsaravanan"><i class="icon-linkedin2" style="color: #0077b5;"></i></a></li>
 					</ul>
 				</div>
-			</nav>
-
-			<div class="colorlib-footer">
-				<p><small> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- <a href="https://colorlib.com" target="_blank"><i class="icon-heart" aria-hidden="true" ></i></a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> </small></p>
-				<ul>
-					<li><a href="https://twitter.com/VichuVishaal"><i class="icon-twitter2" style="color: cornflowerblue;"></i></a></li>
-					<li><a href="https://www.instagram.com/inside_vichus_world/"><i class="icon-instagram" style="color: cornflowerblue;"></i></a></li>
-					<li><a href="https://www.linkedin.com/in/vishaalsaravanan"><i class="icon-linkedin2" style="color: cornflowerblue;"></i></a></li>
-				</ul>
-			</div>
-
-		</aside>
+			</aside>
+			
 
 		<div id="colorlib-main">
 			<section id="colorlib-hero" class="js-fullheight" data-section="home">
@@ -431,7 +435,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Watson Studio</h4>
 										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+											<div class="progress-bar color-3" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
 												<span>75%</span>
 											</div>
 										</div>
@@ -439,7 +443,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Hugging Faces</h4>
 										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<div class="progress-bar color-4" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
 												<span>70%</span>
 											</div>
 										</div>
@@ -448,7 +452,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Fast AI</h4>
 										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+											<div class="progress-bar color-5" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
 												<span>60%</span>
 											</div>
 										</div>
@@ -470,7 +474,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Python</h4>
 										<div class="progress">
-											<div class="progress-bar color-3" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
+											<div class="progress-bar color-1" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width:85%">
 												<span>85%</span>
 											</div>
 										</div>
@@ -478,7 +482,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">SQL & NoSQL</h4>
 										<div class="progress">
-											<div class="progress-bar color-4" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											<div class="progress-bar color-2" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
 												<span>80%</span>
 											</div>
 										</div>
@@ -486,7 +490,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Java</h4>
 										<div class="progress">
-											<div class="progress-bar color-4" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+											<div class="progress-bar color-3" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
 												<span>65%</span>
 											</div>
 										</div>
@@ -502,7 +506,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">R</h4>
 										<div class="progress">
-											<div class="progress-bar color-4" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+											<div class="progress-bar color-5" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
 												<span>60%</span>
 											</div>
 										</div>
@@ -527,7 +531,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">HTML</h4>
 										<div class="progress">
-											<div class="progress-bar color-5" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											<div class="progress-bar color-1" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
 												<span>80%</span>
 											</div>
 										</div>
@@ -535,7 +539,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">React Native</h4>
 										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											<div class="progress-bar color-2" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
 												<span>80%</span>
 											</div>
 										</div>
@@ -543,7 +547,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">CSS</h4>
 										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<div class="progress-bar color-3" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
 												<span>70%</span>
 											</div>
 										</div>
@@ -551,7 +555,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">JavaScript</h4>
 										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+											<div class="progress-bar color-4" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
 												<span>65%</span>
 											</div>
 										</div>
@@ -589,7 +593,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Node JS & Express JS</h4>
 										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+											<div class="progress-bar color-3" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
 												<span>65%</span>
 											</div>
 										</div>
@@ -614,7 +618,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Amazon Web Services</h4>
 										<div class="progress">
-											<div class="progress-bar color-5" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<div class="progress-bar color-1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
 												<span>70%</span>
 											</div>
 										</div>
@@ -622,7 +626,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Jenkins</h4>
 										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<div class="progress-bar color-2" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
 												<span>70%</span>
 											</div>
 										</div>
@@ -630,7 +634,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Google Cloud Platform</h4>
 										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+											<div class="progress-bar color-3" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
 												<span>65%</span>
 											</div>
 										</div>
@@ -638,7 +642,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Docker</h4>
 										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
+											<div class="progress-bar color-4" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%">
 												<span>65%</span>
 											</div>
 										</div>
@@ -646,7 +650,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Heroku</h4>
 										<div class="progress">
-											<div class="progress-bar color-6" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+											<div class="progress-bar color-5" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
 												<span>60%</span>
 											</div>
 										</div>
@@ -684,7 +688,7 @@
 									<div class="progress-wrap">
 										<h4 style="color: #fff;">Premire Pro</h4>
 										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+											<div class="progress-bar color-3" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
 												<span>80%</span>
 											</div>
 										</div>
@@ -712,16 +716,16 @@
 						<div class="col-md-12">
 							<div class="timeline-centered">
 								<!-- Experience 1 -->
-								<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
-									<div class="timeline-entry-inner">
+								<article class="timeline-entry animate-box" data-animate-effect="fadeInLeft" >
+									<div class="timeline-entry-inner" >
 										<div class="timeline-icon color-1">
 											<i class="fa-brands fa-codepen"></i>
 										</div>
 										<div class="timeline-label">
 											<h2>Machine Learning Engineer Intern 
-												<span class="date-right">Oct, 2023 - April, 2024 | Eindhoven, Netherlands</span>
+												<span class="date-right" style="color:rgba(34,0,69,1);">Oct, 2023 - April, 2024 | Eindhoven, Netherlands</span>
 											</h2>
-											<p><strong><a href="https://www.bodyscratch.academy/" target="_blank">Body Scratch B.V.</a></strong></p>
+											<p><strong><a href="https://www.bodyscratch.academy/" target="_blank" style="color: rgba(34,0,69,1);">Body Scratch B.V.</a></strong></p>
 											<ul>
 												<li>Pose Estimation for Dance Moves: Optimized BlazePose and custom CNN models to estimate 12 major and 27 sub-major dance moves.</li>
 												<li>Algorithm Optimization: Fine-tuned pose estimation algorithm with a focus on better accuracy and real-time inference.</li>
@@ -738,9 +742,9 @@
 										</div>
 										<div class="timeline-label">
 											<h2>AI Product Engineering Intern 
-												<span class="date-right">Dec, 2019 - March, 2020 | Chennai, India</span>
+												<span class="date-right" style="color:rgba(34,0,69,1);">Dec, 2019 - March, 2020 | Chennai, India</span>
 											</h2>
-											<p><strong><a href="https://hueint.com/" target="_blank">Hueint Pvt.Ltd.</a></strong></p>
+											<p><strong><a href="https://hueint.com/" target="_blank" style="color: rgba(34,0,69,1);">Hueint Pvt.Ltd.</a></strong></p>
 											<ul>
 												<li>Face Recognition: Developed a YOLO-based computer vision model for real-time face recognition in a SaaS application.</li>
 												<li>Chatbot Development: Designed a chatbot architecture using RASA NLU core.</li>
@@ -758,9 +762,9 @@
 										</div>
 										<div class="timeline-label">
 											<h2>Freelance Back End Developer 
-												<span class="date-right">Nov, 2019 - Aug 2021 | Chennai, India</span>
+												<span class="date-right" style="color:rgba(34,0,69,1);">Nov, 2019 - Aug 2021 | Chennai, India</span>
 											</h2>
-											<p><strong><a href="https://tuloops.org/" target="_blank">Tuloops</a></strong></p>
+											<p><strong><a href="https://tuloops.org/" target="_blank" style="color: rgba(34,0,69,1);">Tuloops</a></strong></p>
 											<ul>
 												<li>Developed small-scale machine learning and web applications for clients, delivered as Software-as-a-Service (SaaS). </li>
 												<li>Constructed Backend Infrastructure for mobile application using React-Native with cloud support in Firebase for an intra-college social-media platform called "Connect US."</li>
