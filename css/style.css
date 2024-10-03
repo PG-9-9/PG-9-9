@@ -1768,5 +1768,28 @@ a:hover {
   color: #fff; /* Change color of active link to stand out */
 }
 
-/* Color change for panel bar ("Masters")*/
-/* Default panel background color (collapsed) */
+/* Space Between Each Sections*/
+.colorlib-education {
+  margin-bottom: 0px !important;
+  padding-bottom: 30px !important;
+}
+
+/* Remove top margin from the Hobbies section */
+.colorlib-services {
+  margin-top: 40px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+
+}
+
+.colorlib-blog {
+  margin-top: 40px !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.colorlib-contact {
+  margin-top: 40px !important;
+  padding-top: 0px !important;
+}
+
