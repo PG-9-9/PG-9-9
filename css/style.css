@@ -1643,3 +1643,81 @@ a:hover {
   top: 0;
   left: 0;
 }
+
+/* Animate box smooth transistions*/
+
+/* Add default hidden state */
+.animate-box {
+  opacity: 0;
+  visibility: hidden; /* Start with hidden */
+}
+
+/* Add visible state when the element comes into view */
+.animate-box.in-view {
+  visibility: visible;
+}
+
+/* FadeInLeft Keyframes */
+@keyframes fadeInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* FadeInRight Keyframes */
+@keyframes fadeInRight {
+  0% {
+      opacity: 0;
+      transform: translateX(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+/* FadeInTop Keyframes */
+@keyframes fadeInTop {
+  0% {
+      opacity: 0;
+      transform: translateY(-30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* FadeInBottom Keyframes */
+@keyframes fadeInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Apply animations on scroll for each effect */
+[data-animate-effect="fadeInLeft"].in-view {
+  animation: fadeInLeft 1.5s ease-out forwards;
+}
+
+[data-animate-effect="fadeInRight"].in-view {
+  animation: fadeInRight 1.5s ease-out forwards;
+}
+
+[data-animate-effect="fadeInTop"].in-view {
+  animation: fadeInTop 1.5s ease-out forwards;
+}
+
+[data-animate-effect="fadeInBottom"].in-view {
+  animation: fadeInBottom 1.5s ease-out forwards;
+}

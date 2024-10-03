@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<style>
+
 			/* Loader styling */
 			.loader-wrapper {
     position: fixed;
@@ -148,7 +149,16 @@
 				background-color: #c0392b;
 			}
 			
-
+			@keyframes fadeInLeft {
+				0% {
+					opacity: 0;
+					transform: translateX(-20px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateX(0);
+				}
+			}
 
 			
 		</style>
@@ -307,7 +317,7 @@
 										<h3 style="color: #fff;">ML Engineer</h3>
 									</div>
 								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
 									<div class="services color-2">
 										<span class="icon2"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 											width="50" height="50"
@@ -325,7 +335,7 @@
 										<h3 style="color: #fff;">BI Developer</h3>
 									</div>
 								</div>
-								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
 									<div class="services color-4">
 										<span class="icon2"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
 											width="50" height="50"
@@ -1420,7 +1430,30 @@
 			});
 	</script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    function reveal() {
+        var reveals = document.querySelectorAll(".animate-box");
+        reveals.forEach(function (element) {
+            var windowHeight = window.innerHeight;
+            var elementTop = element.getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+                element.classList.add("in-view");
+            } else {
+                element.classList.remove("in-view");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", reveal);
+    reveal(); // Initial check when the page loads
+});
+    </script>
+
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
 <script>
 	particlesJS("particles-js", {
   "particles": {
@@ -1477,7 +1510,7 @@
   </script>
   
   
-
+  
 
 	
 	<!-- MAIN JS -->
