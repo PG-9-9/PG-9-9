@@ -1835,3 +1835,27 @@ html {
   scrollbar-color: #302450 #000000; /* Thumb and track color */
 }
 
+/* Button style */
+/* Button style */
+.custom-btn {
+  background-color: rgba(19, 19, 55, 1); /* Purple background */
+  color: #fff; /* White text and icons */
+  border: none; /* No border */
+  padding: 15px 30px; /* Padding to make it look like a button */
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border-radius: 5px; /* Slight rounded corners */
+}
+
+/* Button hover effect */
+.custom-btn:hover {
+  background-color: rgba(52, 32, 83) !important; /* Light translucent white on hover, with !important */
+  color: #fff !important; /* Keep text and icons white */
+}
+
+/* Icon margin */
+.custom-btn i {
+  margin-right: 5px; /* Space between GitHub icon and text */
+}
