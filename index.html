@@ -2,64 +2,88 @@
 <html>
 	<head>
 		<style>
-		.navbar-toggler {
-    		display: none !important;
-		}
-
-
+			.navbar-toggler {
+				display: none !important;
+			}
 			/* Loader styling */
+/* Scrollbar styles */
+body.dark-scrollbar {
+  overflow: hidden;
+}
+
+body.dark-scrollbar * {
+  scrollbar-width: thin;
+  scrollbar-color: black black; /* Dark scrollbars */
+}
+
+body.dark-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+body.dark-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 10px;
+}
+
+body.dark-scrollbar::-webkit-scrollbar-track {
+  background-color: #111;
+}
+
 			.loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    z-index: 9999;
-  }
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background-color: black;
+				z-index: 9999;
+				overflow: hidden;
+			}
 
-  .thinking-face {
-    font-size: 100px;
-    animation: flap 1s infinite ease-in-out;
-  }
+			.thinking-face {
+				font-size: 100px;
+				animation: flap 1s infinite ease-in-out;
+				overflow: hidden;
+			}
 
-  @keyframes flap {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+			@keyframes flap {
+				0% {
+				transform: translateY(0);
+				}
+				50% {
+				transform: translateY(-20px);
+				}
+				100% {
+				transform: translateY(0);
+				}
+			}
 
-  .happy-face {
-    display: none;
-    font-size: 100px;
-  }
+			.happy-face {
+				display: none;
+				font-size: 100px;
+			}
 
-  .fade-in {
-    display: block;
-    animation: fadeIn 1s forwards;
-  }
+			.fade-in {
+				display: block;
+				animation: fadeIn 1s forwards;
+			}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
+			@keyframes fadeIn {
+				from {
+				opacity: 0;
+				}
+				to {
+				opacity: 1;
+				}
+			}
 
-  .hidden {
-    display: none;
-  }
+			.hidden {
+				display: none;
+			}
 
 			/* General Styling */
 			.colorlib-work {
@@ -243,7 +267,7 @@
 
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </span> </small></p>
 					<ul>
-						<li><a href="https://twitter.com/VichuVishaal"><i class="icon-twitter2" style="color: #00acee;"></i></a></li>
+						<li><a href="https://x.com/im_not_so_borin"><i class="icon-twitter2" style="color: #00acee;"></i></a></li>
 						<li><a href="https://www.instagram.com/inside_vichus_world/"><i class="icon-instagram" style="color: #833AB4;"></i></a></li>
 						<li><a href="https://www.linkedin.com/in/vishaalsaravanan"><i class="icon-linkedin2" style="color: #0077b5;"></i></a></li>
 					</ul>
@@ -1336,7 +1360,7 @@
 					</div>
 				</div>
 				<div class="colorlib-feature colorlib-feature-sm animate-box" data-animate-effect="fadeInLeft" style="display: flexbox;flex-direction: row ;justify-content: space-evenly; ">
-					<a style="margin-right: 1em; margin-left:0.5em ;" href="https://twitter.com/VichuVishaal"><i class="icon-twitter2" style="color: #302450;"></i></a>
+					<a style="margin-right: 1em; margin-left:0.5em ;" href="https://x.com/im_not_so_borin"><i class="icon-twitter2" style="color: #302450;"></i></a>
 					<a style="margin-right: 1em;" href="https://www.instagram.com/inside_vichus_world/"><i class="icon-instagram" style="color: #302450;"></i></a>
 					<a href="https://www.linkedin.com/in/vishaalsaravanan"><i class="icon-linkedin2" style="color: #302450;"></i></a>
 				</div>
@@ -1413,21 +1437,26 @@
 		}
 	</script>
 	
-	<!--happy face loader -->
-	<script>
-		window.addEventListener("load", function () {
-		  // Show happy face after 3 seconds
-		  setTimeout(function () {
-			document.querySelector(".thinking-face").style.display = "none";
-			document.querySelector(".happy-face").classList.add("fade-in");
-		  }, 3000);
-	  
-		  // Hide loader completely after 4 seconds
-		  setTimeout(function () {
-			document.querySelector(".loader-wrapper").classList.add("hidden");
-		  }, 4000);
-		});
-	</script>
+<!-- happy face loader -->
+<script>
+	window.addEventListener("load", function () {
+	  // Add dark-scrollbar class to hide scrollbars during loading
+	  document.body.classList.add("dark-scrollbar");
+  
+	  // Show happy face after 3 seconds
+	  setTimeout(function () {
+		document.querySelector(".thinking-face").style.display = "none";
+		document.querySelector(".happy-face").classList.add("fade-in");
+	  }, 3000);
+  
+	  // Hide loader completely after 4 seconds and remove dark-scrollbar
+	  setTimeout(function () {
+		document.querySelector(".loader-wrapper").classList.add("hidden");
+		document.body.classList.remove("dark-scrollbar"); // Re-enable scrollbars after loader
+	  }, 4000);
+	});
+  </script>
+  
 	  
 	<!-- JavaScript for scroll-triggered animations -->
 	<script>
@@ -1528,8 +1557,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	<!-- MAIN JS -->
 	<script src="js/main.js"></script>
 
-
-	
 
 
 	</body>
